@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: rgb(137, 136, 136);
+    display: grid;
+}
+
+.bookshelf {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    background-color: rgb(122, 119, 119);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+
+}
+
+.library {
+    height: 85vh;
+}
+
+.add-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    position: absolute;
+    margin: auto;   
+    width: 60%;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: darkgray;
+}
+
+.hideform {
+    display: none;
+}
+
+td, th { border: 1px solid black; }
+
+.books {
+
+}
