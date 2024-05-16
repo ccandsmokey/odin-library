@@ -1,6 +1,6 @@
 // document.addEventListener('DOMContentLoaded', function() {
 
-const myLibrary = [{title: "bible", author:"god", pages:"10001", year:"1bc", read:"yes"}];
+const myLibrary = [{title: "Breath", author:"James Nesdtor", pages:"354", year:"2018", read:"yes"}];
 
 function Book(title, author, pages, year,read) {
   this.title = title
@@ -34,22 +34,23 @@ function addBookToLibrary() {
 }
 
 function displayLibrary() {
-    const table = document.getElementById("book");
+    let cardsContainer = document.getElementById("cards");
+    cardsContainer.innerHTML = '';
     
-    // Clear the table
-    while (table.rows.length > 1) {
-        table.deleteRow(1);
-    }
-    
-    let card = document.getElementById("book")
     myLibrary.forEach(library => {
-        let tr = document.createElement('tr');
+        let card = document.createElement('div');
+        card.classList.add('card');
+        let cards = document.getElementById("cards");
+        cards.appendChild(card);
+        let list = document.createElement("ul")
+        list.classList.add("myUl")
+        card.appendChild(list)
         Object.values(library).forEach(value => { 
-            let td = document.createElement('td');
-            td.innerHTML= value;
-            tr.appendChild(td);
+            let li = document.createElement("li");
+            let text = document.createTextNode(value);
+            li.appendChild(text);
+            list.appendChild(li);
         });
-        card.appendChild(tr);
     });
 }
 
